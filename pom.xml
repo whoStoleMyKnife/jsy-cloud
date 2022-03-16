@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jsy.cloud</groupId>
+    <artifactId>jsy-cloud-platform</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <resource.delimiter>@</resource.delimiter>
+        <springboot.version>2.6.4</springboot.version>
+        <dubbo.version>3.0.6</dubbo.version>
+    </properties>
+
+    <modules>
+        <module>jsy-cloud-api-auth</module>
+        <module>jsy-cloud-api-log</module>
+        <module>jsy-cloud-api-notice</module>
+        <module>jsy-cloud-api-parent</module>
+        <module>jsy-cloud-api-reporter</module>
+        <module>jsy-cloud-api-upms</module>
+        <module>jsy-cloud-api-workflow</module>
+        <module>jsy-cloud-auth</module>
+        <module>jsy-cloud-common-core</module>
+        <module>jsy-cloud-provider-auth</module>
+        <module>jsy-cloud-provider-log</module>
+        <module>jsy-cloud-provider-notice</module>
+        <module>jsy-cloud-provider-parent</module>
+        <module>jsy-cloud-provider-reporter</module>
+        <module>jsy-cloud-provider-upms</module>
+        <module>jsy-cloud-provider-workflow</module>
+        <module>jsy-cloud-upms</module>
+        <module>jsy-cloud-provider-demo</module>
+        <module>jsy-cloud-bff-demo</module>
+        <module>jsy-cloud-api-demo</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>3.14.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

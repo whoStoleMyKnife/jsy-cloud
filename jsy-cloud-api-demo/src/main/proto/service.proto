@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package com.jsy.cloud.api.demo;
+
+option java_multiple_files = true;
+
+import 'request.proto';
+import 'response.proto';
+
+service DemoService{
+  rpc Test(DemoReq) returns (DemoResp);
+}

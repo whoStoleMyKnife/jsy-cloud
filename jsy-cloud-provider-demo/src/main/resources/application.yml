@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: jsy-cloud-provider-demo
+dubbo:
+  protocol:
+    name: tri
+    port: -1
+  registry:
+    address: registry.jsy.com:2181
+    protocol: zookeeper
