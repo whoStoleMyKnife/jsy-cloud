@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.jsy.cloud</groupId>
-            <artifactId>jsy-cloud-provider-upms</artifactId>
+            <artifactId>jsy-cloud-api-upms</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

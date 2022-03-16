@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.jsy.cloud</groupId>
-            <artifactId>jsy-cloud-provider-reporter</artifactId>
+            <artifactId>jsy-cloud-api-reporter</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

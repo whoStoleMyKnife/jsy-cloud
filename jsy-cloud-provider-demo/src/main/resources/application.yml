@@ -6,5 +6,5 @@ dubbo:
     name: tri
     port: -1
   registry:
-    address: registry.jsy.com:2181
+    address: zookeeper:2181
     protocol: zookeeper

@@ -1,5 +1,7 @@
 server:
   port: 10001
+  servlet:
+    context-path: /bff-demo
 #  port: 0
 spring:
   application:
@@ -9,5 +11,5 @@ dubbo:
     name: tri
     port: -1
   registry:
-    address: registry.jsy.com:2181
+    address: zookeeper:2181
     protocol: zookeeper

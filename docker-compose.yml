@@ -9,26 +9,46 @@ services:
     ports:
       - "80:80"
       - "8080:8080"
+
   nginx:
     image: nginx:latest
     container_name: nginx
     volumes:
       - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
-    ports:
-      - "81:80"
+      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./web:/usr/local/nginx/html
+    labels:
+      - traefik.http.routers.nginx.rule=PathPrefix(`/home`)
+      - traefik.http.services.nginx.loadbalancer.server.port=80
+
   zookeeper:
     image: zookeeper:latest
     container_name: zookeeper
     ports:
       - "2181:2181"
+
   mysql:
     image: mysql/mysql-server:latest
     container_name: mysql
     ports:
       - "3306:3306"
+
   redis:
     build: ./config/redis
     image: jsy/redis:latest
     container_name: redis
     ports:
       - "6379:6379"
+
+  jsy-cloud-bff-demo:
+    build: ./jsy-cloud-bff-demo
+    image: jsy/jsy-cloud-bff-demo:latest
+    container_name: jsy-cloud-bff-demo
+    labels:
+      - traefik.http.routers.jsy-cloud-bff-demo.rule=PathPrefix(`/bff-demo`)
+      - traefik.http.services.jsy-cloud-bff-demo.loadbalancer.server.port=10001
+
+  jsy-cloud-provider-demo:
+    build: ./jsy-cloud-provider-demo
+    image: jsy/jsy-cloud-provider-demo:latest
+    container_name: jsy-cloud-provider-demo
