@@ -1,5 +1,3 @@
-## 企业运营管理软件平台解决方案
-
 ### 技术架构图
 
 ![技术架构图](./tutorial/jsy-cloud-architecture.png)
