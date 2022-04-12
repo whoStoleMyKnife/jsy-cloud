@@ -14,6 +14,11 @@
     <dependencies>
         <dependency>
             <groupId>com.jsy.cloud</groupId>
+            <artifactId>jsy-cloud-common-core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jsy.cloud</groupId>
             <artifactId>jsy-cloud-api-demo</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>

@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: jsy-cloud-provider-auth
-dubbo:
-  protocol:
-    port: -1
-  registry:
-    address: 192.168.9.158:2181
-    protocol: zookeeper

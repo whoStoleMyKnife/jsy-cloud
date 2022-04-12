@@ -19,23 +19,9 @@
     </properties>
 
     <modules>
-        <module>jsy-cloud-api-auth</module>
-        <module>jsy-cloud-api-log</module>
-        <module>jsy-cloud-api-notice</module>
         <module>jsy-cloud-api-parent</module>
-        <module>jsy-cloud-api-reporter</module>
-        <module>jsy-cloud-api-upms</module>
-        <module>jsy-cloud-api-workflow</module>
-        <module>jsy-cloud-auth</module>
         <module>jsy-cloud-common-core</module>
-        <module>jsy-cloud-provider-auth</module>
-        <module>jsy-cloud-provider-log</module>
-        <module>jsy-cloud-provider-notice</module>
         <module>jsy-cloud-provider-parent</module>
-        <module>jsy-cloud-provider-reporter</module>
-        <module>jsy-cloud-provider-upms</module>
-        <module>jsy-cloud-provider-workflow</module>
-        <module>jsy-cloud-upms</module>
         <module>jsy-cloud-provider-demo</module>
         <module>jsy-cloud-bff-demo</module>
         <module>jsy-cloud-api-demo</module>
